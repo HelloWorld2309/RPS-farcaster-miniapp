@@ -1,4 +1,7 @@
 {
+  "rewrites": [
+    { "source": "/frame", "destination": "/public/frame.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
