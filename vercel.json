@@ -1,14 +1,11 @@
 {
-  "cleanUrls": true,
-  "routes": [
+  "headers": [
     {
-      "src": "/frame",
-      "dest": "/frame.html",
-      "headers": {
-        "Content-Type": "text/html; charset=utf-8",
-        "X-Frame-Options": "ALLOWALL",
-        "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate"
-      }
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "ALLOWALL" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
     }
   ]
 }
